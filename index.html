@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP</title>
+    <link rel="icon" type="image/png" href="images/LOGO.png">
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+<body class="day-mode">
+    <div class="BAR">
+        <div class="Profile">
+            <a href="views/profile.html">
+                <img src="https://static.vecteezy.com/system/resources/previews/008/442/086/non_2x/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg" alt="Profile Picture">
+            </a>
+        </div>
+        <div class="BAR-content">
+            <ul class="nav-list">
+                <li><a href="views/home.html">HOME</a></li>
+                <li><a href="views/library.html">LIBRARY</a></li>
+                <li><a href="index.html">NEW</a></li>
+                <li><a href="#">TRENDING</a></li>
+            </ul>
+            <h1 id="shop-title">NEW</h1>
+            <div class="search-group">
+                <div class="search-row">
+                    <input type="text" name="search" placeholder="search..." id="search-input">
+                    <button type="submit" id="search-btn">Search</button>
+                    <button type="button" name="mode">Night</button>
+                </div>
+                <button type="button" name="Panel" class="panel-btn" onclick="location.href='views/profile.html'">Panel</button>
+            </div>
+        </div>
+    </div>
+    <div class="hid-button">
+        <button type="button" name="hide" class="hide-btn" id="hide-btn">
+            <span id="hide-icon" style="font-size:1.2em;vertical-align:middle;">&#128065;</span>
+            <span id="hide-text">Hide</span>
+        </button>
+    </div>
+    <div class="content" style="flex: 1; padding: 20px; margin-top: 90px; margin-bottom: 100px;">
+        <h2>Welcome to the Shop</h2>
+        <div class="price-filter">
+            <button class="filter-btn" id="filter-btn">Filter by Price</button>
+            <div class="filter-options" id="filter-options">
+                <button class="price-high" >high to low</button>
+                <button class="price-low" >low to high</button>
+            </div>
+        </div>
+        <div class="product-grid"></div>
+    </div>
+    <div id="footer-placeholder"></div>
+    <script src="js/shop.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

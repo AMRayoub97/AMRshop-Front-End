@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Password</title>
+    <style>
+        body {
+            background: #f5f5f5;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .change-password-container {
+            max-width: 400px;
+            margin: 60px auto;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+            padding: 32px 28px;
+        }
+        .change-password-container h1 {
+            text-align: center;
+            color: #750675;
+            margin-bottom: 24px;
+            font-size: 1.6em;
+        }
+        #change-password-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        #change-password-form label {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 4px;
+        }
+        #change-password-form input[type="password"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1em;
+            background: #fafafa;
+            transition: border-color 0.2s;
+        }
+        #change-password-form input[type="password"]:focus {
+            border-color: #750675;
+            outline: none;
+        }
+        #change-password-form button {
+            margin-top: 12px;
+            padding: 12px;
+            background: #750675;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        #change-password-form button:hover {
+            background: #a03ea0;
+        }
+
+        /* NIGHT MODE STYLES */
+        .night-mode body {
+            background: #181818 !important;
+        }
+        .night-mode .change-password-container {
+            background: #232323 !important;
+            box-shadow: 0 4px 32px #c9b03755 !important;
+        }
+        .night-mode .change-password-container h1 {
+            color: #c9b037 !important;
+        }
+        .night-mode #change-password-form label {
+            color: #c9b037 !important;
+        }
+        .night-mode #change-password-form input[type="password"] {
+            background: #181818 !important;
+            color: #fff !important;
+            border: 1px solid #c9b037 !important;
+        }
+        .night-mode #change-password-form input[type="password"]:focus {
+            border-color: #c9b037 !important;
+        }
+        .night-mode #change-password-form button {
+            background: linear-gradient(90deg, #c9b037 0%, #181818 100%) !important;
+            color: #181818 !important;
+        }
+        .night-mode #change-password-form button:hover {
+            background: linear-gradient(90deg, #181818 0%, #c9b037 100%) !important;
+            color: #c9b037 !important;
+        }
+        .night-mode-toggle {
+            position: fixed;
+            top: 24px;
+            right: 32px;
+            z-index: 100;
+            background: linear-gradient(90deg, #181818 60%, #c9b037 100%);
+            color: #c9b037;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 10px #c9b03733;
+            transition: background 0.2s, color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .night-mode-toggle:hover {
+            background: linear-gradient(90deg, #c9b037 0%, #181818 100%);
+            color: #181818;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" class="night-mode-toggle" id="night-mode-toggle">
+        <span id="night-icon">&#127769;</span>
+        <span id="night-text">Night Mode</span>
+    </button>
+    <div class="change-password-container">
+        <h1>Change Password</h1>
+        <form id="change-password-form">
+            <label for="current-password">Current Password:</label>
+            <input type="password" id="current-password" name="current-password" required>
+
+            <label for="new-password">New Password:</label>
+            <input type="password" id="new-password" name="new-password" required>
+
+            <label for="confirm-password">Confirm New Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <button type="submit">Change Password</button>
+        </form>
+    </div>
+    <script>
+        const nightModeButton = document.getElementById('night-mode-toggle');
+        nightModeButton.onclick = function() {
+            if (document.documentElement.classList.contains('night-mode')) {
+                document.documentElement.classList.remove('night-mode');
+                nightModeButton.querySelector('#night-text').textContent = 'Night Mode';
+                localStorage.setItem('nightMode', 'false');
+            } else {
+                document.documentElement.classList.add('night-mode');
+                nightModeButton.querySelector('#night-text').textContent = 'Day Mode';
+                localStorage.setItem('nightMode', 'true');
+            }
+        };
+    </script>
+</body>
+</html>

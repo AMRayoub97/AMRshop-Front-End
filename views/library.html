@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIBRARY</title>
+    <link rel="icon" type="image/png" href="https://th.bing.com/th/id/R.5a54ed8571a62fb031d256087797c21b?rik=O81X%2fbvOUZuE2g&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2015%2f12%2fnike-logo-wallpapers-white-black.jpg&ehk=OS8whl5LL8mGvd2rrN9gSVQTttmuXNkqsxEUEoaQG84%3d&risl=&pid=ImgRaw&r=0">
+    <link rel="stylesheet" href="../css/library.css">
+</head>
+<body class="day-mode">
+    <div class="BAR">
+        <div class="Profile">
+            <a href="profile.html">
+                <img src="https://static.vecteezy.com/system/resources/previews/008/442/086/non_2x/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg" alt="Profile Picture">
+            </a>
+        </div>
+        <div class="BAR-content">
+            <ul class="nav-list">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="library.html">LIBRARY</a></li>
+                <li><a href="../index.html">NEW</a></li>
+                <li><a href="#">TRENDING</a></li>
+            </ul>
+            <h1 id="library-title">LIBRARY</h1>
+            <div class="search-group">
+                <div class="search-row">
+                    <input type="text" name="search" placeholder="search verse..." id="search-input">
+                    <button type="submit" id="search-btn">Search</button>
+                    <button type="button" name="mode">Night</button>
+                </div>
+                <button type="button" name="Panel" class="panel-btn" onclick="location.href='profile.html'">Panel</button>
+            </div>
+        </div>
+    </div>
+    <div class="hid-button">
+        <button type="button" name="hide" class="hide-btn" id="hide-btn">
+            <span id="hide-icon" style="font-size:1.2em;vertical-align:middle;">&#128065;</span>
+            <span id="hide-text">Hide</span>
+        </button>
+    </div>
+    <div class="content" style="flex: 1; padding: 20px; margin-top: 90px; margin-bottom: 100px;">
+        <h2>Psalm 23 Verses (NVI)</h2>
+        <div class="product-grid" id="verse-grid"></div>
+    </div>
+    <div id="footer-placeholder"></div>
+    <script src="../js/library.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <button type="button" class="night-mode" id="night-mode-toggle">
+        <span id="night-icon">&#127769;</span>
+        <span id="night-text">Night Mode</span>
+    </button>
+    <div class="container-outer">
+        <div class="container">
+            <form id="login-form">
+                <h2>Login</h2>
+                <label for="login-username">Username</label>
+                <input type="text" id="login-username" required>
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" required>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="remember-me">Remember me
+                    <a href="changePass.html" id="forgot-password">Forgot password?</a>
+                </div>
+                <button type="submit" id="login-submit">Log In</button>
+            </form>
+            
+            <button type="button" class="switch-link" id="show-signup">
+                <span style="font-size:1.2em;vertical-align:middle;">&#x1F511;</span>
+                Don't have an account? Sign up
+            </button>
+            <form id="signup-form" class="hidden">
+                <h2>Sign Up</h2>
+                <label for="signup-username">Username</label>
+                <input type="text" id="signup-username" required>
+                <label for="signup-email">Email</label>
+                <input type="email" id="signup-email" required>
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" required>
+                <label for="signup-password">Confirm Password</label>
+                <input type="password" id="signup-password2" required>
+                <button type="submit" id="signup-submit">Sign Up</button>
+            </form>
+            
+            <button type="button" class="switch-link hidden" id="show-login">
+                <span style="font-size:1.2em;vertical-align:middle;">&#x2B05;</span>
+                Already have an account? Log in
+            </button>
+        </div>
+    </div>
+    <script src="../js/login.js"></script>
+</body>
+</html>

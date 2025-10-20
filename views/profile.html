@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="icon" type="image/png" href="https://static.vecteezy.com/system/resources/previews/008/442/086/non_2x/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg">
+    <link rel="stylesheet" href="../css/profile.css">
+
+</head>
+<body>
+    <div class="BAR">
+        <div class="background">
+            <img src="https://th.bing.com/th/id/OIP.sXPQZHFZkOIQoZ8ID94SKgHaEo?rs=1&pid=ImgDetMain" alt="Background Image">
+        </div>
+        <div class="profile">
+            <img src="https://static.vecteezy.com/system/resources/previews/008/442/086/non_2x/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg" alt="Profile Picture">
+            <h2 id="Nom">Guest</h2>
+        </div>
+    </div>
+    <div class="logout-button">
+        <button onclick="location.href='loginPage.html'">Logout</button>
+    </div>
+    <div class="content-layout">
+        <div class="left-side">
+            <div class="Information">
+                <h3>Information</h3>
+                <p>Username: <span class="username">Guest</span></p>
+                <p>Email: <span id="email"><span class="username">Guest</span>@example.com</span></p>
+                <p>Phone: <span id="phone">000-000-000</span></p>
+                <p>Password: <span id="password">********</span> <a href="changePass.html">Change Password</a></p>
+                <p>Address: <span id="address">77 Rue Romani ,CASABLANCA, MOROCCO</span></p>
+                <p>Join Date: <span id="join-date">June 3, 2025</span></p>
+                <p>Last Login: <span id="last-login" id="last-login"></span></p>
+                <p>Account Status: <span id="account-status">Active</span></p>
+                <p>Membership Level: <span id="membership-level">Gold</span></p>
+                <p>Wishlist: <span id="wishlist"><a href="../index.html">5 items</a></span></p>
+                <p>Reviews: <span id="reviews"><a href="../index.html">10 reviews</a></span></p>
+                <p>Points: <span id="points" id="points"></span></p>
+                <p>Notifications: <span id="notifications">Enabled</span></p>
+            </div>
+        </div>
+        <div class="center-content">
+        <h2>Welcome back, <span class="username">Guest</span>!</h2>
+        <p>Here you can manage your account, view your orders, and update your information.</p>
+         <h3>Your Achievements</h3>
+        <img src="https://th.bing.com/th/id/R.65754abda9c633d711a084d70a9a9e84?rik=2mVdO3A2znMR5Q&pid=ImgRaw&r=0" alt="Badge 1" />PREMIUM QUALITY
+        <img src="https://png.pngtree.com/png-clipart/20190604/original/pngtree-badge-png-image_996483.jpg" alt="Badge 2" /> FIRST ORDER
+        <img src="https://th.bing.com/th/id/OIP.9w_4NyUpswVM1BWTA6tsWQHaLg?w=900&h=1398&rs=1&pid=ImgDetMain" alt="Badge 3" />FIRST REVIEWER
+        <p>Achievements: 3 badges earned</p>
+    </div>
+        <div class="right-side">
+            <div class="panel">
+                <div class="panel-content">
+                    <h3>Profile Panel</h3>
+                    <p>My Orders:</p>
+                    <div>
+                        <ul id="orders-list"></ul>
+                    </div>
+                </div>
+                <button class="panel-btn" onclick="location.href='../index.html'">GO TO PAYMENT</button>
+            </div>
+        </div>
+    </div>
+    <div id="footer-placeholder"></div>
+    <script src="../js/profile.js"></script>
+</body>
+</html>
